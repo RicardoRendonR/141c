@@ -8,3 +8,7 @@ import seaborn as sns
 DF= pd.read_csv("C:/Users/LQ/iCloudDrive/2018 Spring/STA 141C/final/train.csv")
 DF['SalePrice'].describe()
 sns.distplot(DF['SalePrice']);
+
+print("Skewness: %f" % DF['SalePrice'].skew())
+print("Kurtosis: %f" % DF['SalePrice'].kurt())
+# Compare the graph and calculation result above, we can see the long tail is indeed on the right, and the peak is steep
